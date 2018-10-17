@@ -1,0 +1,27 @@
+{
+  "name": "@tmtek/twitchstreams",
+  "version": "0.0.1",
+  "description": "A convo Twitch Client for DialogFlow.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmtek/twitchstreams.git"
+  },
+  "keywords": [
+    "twitch",
+    "dialogflow"
+  ],
+  "author": "tmtek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmtek/twitchstreams/issues"
+  },
+  "homepage": "https://github.com/tmtek/twitchstreams#readme",
+  "dependencies": {
+    "@tmtek/convo": "^0.1.0",
+    "@tmtek/twitch": "0.0.3"
+  }
+}
