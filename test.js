@@ -1,7 +1,23 @@
-const {Convo, Say} = require('@tmtek/convo');
+const {ConvoApp, Convo, Say} = require('@tmtek/convo');
 const {TwitchStreamsApp} = require('./index');
 
-TwitchStreamsApp.clientId = "your client id";
+
+
+new TwitchStreamsApp("your client id")
+  .intent(new Convo(), 'whos_streaming', {game:"Destiny 2"}, null, {log:false})
+  .then(({app, convo}) => app.intent(new Convo(convo), 'next_from_list', null, null, {log:true}))
+  .then(({app, convo}) => app.intent(new Convo(convo), 'next_from_list', null, null, {log:true}))
+
+
+
+/*
+app.intent('Default Welcome Intent', (conv) => {
+  return Convo.ask(TwitchStreamsApp.actions.welcome(new Convo(conv)),{log:true});
+});
+*/
+
+
+
 
 
 //Convo.ask(TwitchStreamsApp.actions.welcome(new Convo()), {log:true});
@@ -10,6 +26,7 @@ TwitchStreamsApp.clientId = "your client id";
 //Convo.ask(TwitchStreamsApp.actions.myAccount(new Convo()), {log:true});
 
 //Convo.ask(TwitchStreamsApp.actions.whosStreaming(new Convo()), {log:true})
+
 /*
 Convo.ask(TwitchStreamsApp.actions.whosStreaming(new Convo()), {log:true})
 .then(convo => Convo.ask(TwitchStreamsApp.actions.selectNextStream(new Convo(convo)), {log:true}))

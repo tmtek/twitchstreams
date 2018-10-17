@@ -1,6 +1,6 @@
 {
   "name": "@tmtek/twitchstreams",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A convo Twitch Client for DialogFlow.",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/tmtek/twitchstreams#readme",
   "dependencies": {
-    "@tmtek/convo": "^0.1.0",
+    "@tmtek/convo": "^0.1.4",
     "@tmtek/twitch": "0.0.3"
   }
 }
